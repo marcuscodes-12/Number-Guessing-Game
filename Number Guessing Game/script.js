@@ -1,5 +1,5 @@
 const randomNum = Math.floor(Math.random() * 50) + 1;
-// console.log = randomNum;
+
 let guessCount = 6;
 
 document.addEventListener('keydown', function(event) {
@@ -18,7 +18,6 @@ function verifyNumber() {
   let result = document.getElementById("result");
   let guessCountalert = document.getElementById("guessCountalert");
 
-  //   alert(randomNum);
   console.log(userInput);
 
   let apUserInput = parseInt(userInput);
@@ -26,8 +25,7 @@ function verifyNumber() {
   if (apUserInput === randomNum) {
     result.textContent = "you winn!!";
     result.style.color = "green";
-    // suggestion.textContent = " ";
-    // suggestion.style.color = "white";
+    
     guessCountalert.textContent = " ";
     guessCountalert.style.color = "white";
 
@@ -37,7 +35,7 @@ function verifyNumber() {
     setTimeout(() => {
       location.reload();
     }, 3000);
-    // reset();
+    
   } else {
     if (apUserInput < randomNum) {
       suggestion.textContent = "Guess Higher";
@@ -64,7 +62,6 @@ function verifyNumber() {
         location.reload();
       }, 3000);
 
-      // reset();
     }
   }
 }
