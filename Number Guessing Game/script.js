@@ -2,6 +2,15 @@ const randomNum = Math.floor(Math.random() * 50) + 1;
 
 let guessCount = 6;
 
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+
+      // Trigger the submit button click
+      const submitButton = document.getElementById('submitButton');
+      submitButton.click();
+  }
+});
+
 function verifyNumber() {
   guessCount--;
   let userInput = document.getElementById("userInput").value;
